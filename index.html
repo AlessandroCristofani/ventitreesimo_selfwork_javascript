@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventitreesimo Selfwork Javascript</title>
+</head>
+<body>
+    <script>
+        function turno(tiri){
+            let punteggio=0;
+            for(let i=1;i<=tiri;i++) {
+                punteggio+=Math.floor(Math.random()*(6+1-1)+1);
+            }
+            return punteggio;
+        }
+        let tiri=prompt("Indicare il numero di tiri: ")
+        let punteggioGiocatore1=turno(tiri);
+        let punteggioGiocatore2=turno(tiri);
+        if(punteggioGiocatore1 > punteggioGiocatore2){
+            console.log("Il giocatore 1 ha vinto! con il punteggio di "+punteggioGiocatore1+" a "+punteggioGiocatore2);
+        }else if (punteggioGiocatore2 > punteggioGiocatore1) {
+            console.log("Il giocatore 2 ha vinto! con il punteggio di "+punteggioGiocatore2+" a "+punteggioGiocatore1);
+        }else {
+            console.log("Parità! "+punteggioGiocatore2+" a "+punteggioGiocatore1);
+        }
+    </script>
+</body>
+</html>
